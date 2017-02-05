@@ -14,9 +14,9 @@ if ($db->connect_error){
 }
 echo "Connected successfully";
 
-// Query patients
-$sql = "SELECT * FROM patients";
-$patientID = mysqli_query($db, $sql);
+// Query physicians
+$sql = "SELECT * FROM physicians";
+$physicianID = mysqli_query($db, $sql);
 
 // Make sure the form is being posted
 if($_SERVER['REQUEST_METHOD'] == 'POST')
@@ -27,10 +27,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
   $address = $mysqli->real_escape_string($_POST['address']);
   $phone = $mysqli->real_escape_string($_POST['phone']);
   $poc = $mysqli->real_escape_string($_POST['poc']);
+  $poc_phone = $mysqli->real_escape_string($_POST['poc_phone']);
+  $position = $mysqli->real_escape_string($_POST['position']);
 
   $_SESSION['name'] = $name;
 
-  $sql = "INSERT INTO patients (name, dob, blood, address, phone, poc) "
+  $sql = "INSERT INTO physicians (name, dob, blood, address, phone, poc) "
   . "VALUES ('$name', '$dob', '$blood', '$address', '$phone', '$poc')";
   if ($mysqli->query($sql)=== true){
     $_SESSION['message'] = 'Registration successful';
@@ -58,7 +60,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 
   <style>
   .jumbotron{
-    background-color:#7D7BFF;
+    background-color:#FF7575;
     color:white;
   }
   /* Adds borders for tabs */
@@ -91,37 +93,41 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
       </div>
 
 
+
     </div>
 
     <div id="container">
       <div class="form-group">
-        <h2>Add a patient</h2>
-        <form class="form-group" action="patient.php" method="post" enctype="multipart/form-data" autocomplete="off">
+        <h2>Add a physician</h2>
+        <form class="form-group" action="physician.php" method="post" enctype="multipart/form-data" autocomplete="off">
           <div class="alert alert-error"></div>
-          <h3>Patient Name:</h3><br> <input type="text" placeholder="Name" name="name" required /><br>
+          <h3>Physician Name:</h3><br> <input type="text" placeholder="Name" name="name" required /><br>
           <h3>Date of Birth:</h3><br> <input type="text" placeholder="Date of Birth" name="dob" required /><br>
           <h3>Blood Type:</h3><br> <input type="text" placeholder="Blood Type" name="blood" required /><br>
           <h3>Address:</h3><br> <input type="text" placeholder="Address" name="address" required /><br>
           <h3>Phone:</h3><br> <input type="text" placeholder="Phone" name="phone" required /><br>
           <h3>Point of Contact:</h3><br> <input type="text" placeholder="Emergency Contact" name="poc" required /><br>
           <h3>Contact Phone:</h3><br> <input type="text" placeholder="Contact Phone" name="poc_phone" required /><br>
+          <h3>Position:</h3><br> <input type="text" placeholder="Position" name="position" required /><br>
           <br>
           <br>
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>
       </div>
 
-      <div id="patients">
-        <h3>Some patients:</h3>
+      <div id="physicians">
+        <h3>Some physicians:</h3>
         <ul>
-          <?php while($row = mysqli_fetch_assoc($patientID)) : ?>
-            <li class="patientID"><span><?php echo $row['name'] ?><br></span>
+          <?php while($row = mysqli_fetch_assoc($physicianID)) : ?>
+            <li class="physicianID">
+              <span>Name: <?php echo $row['name'] ?><br></span>
               <span>Date of Birth: <?php echo $row['DOB'] ?><br></span>
               <span>Blood: <?php echo $row['Blood'] ?><br></span>
               <span>Address: <?php echo $row['Address'] ?><br></span>
               <span>Phone: <?php echo $row['phone'] ?><br></span>
               <span>Emergency Contact: <?php echo $row['poc'] ?><br></span>
               <span>Phone: <?php echo $row['poc_phone'] ?><br></span>
+              <span>Position: <?php echo $row['position'] ?><br></span>
               <br>
 
             </li>
