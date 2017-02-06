@@ -15,9 +15,29 @@
 .appointments {
   font-size: 18px;
 }
+.treatments {
+  font-size: 18px;
+}
+.physicians {
+  font-size: 18px;
+}
 .page-header{
   margin:0px 0 10px;
 }
+.object-fit_fill {
+   object-fit: fill
+}
+
+.object-fit_cover { object-fit: cover }
+
+img {
+  height: 200px;
+  background-color: #ddd
+}
+
+img[class] {
+  width: 100%;
+ }
 
 ul {
 list-style-type: none;

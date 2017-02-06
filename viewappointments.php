@@ -14,39 +14,16 @@ if ($db->connect_error){
   die("Oh, noooo...Connection to database failed! " . $db->connect_error);
 }
 
-// Query patients
-$sql = "SELECT * FROM patients";
-$patientID = mysqli_query($db, $sql);
-
-// Make sure the form is being posted
-if($_SERVER['REQUEST_METHOD'] == 'POST')
-{
-  $name = $mysqli->real_escape_string($_POST['name']);
-  $dob = $mysqli->real_escape_string($_POST['dob']);
-  $blood = $mysqli->real_escape_string($_POST['blood']);
-  $address = $mysqli->real_escape_string($_POST['address']);
-  $phone = $mysqli->real_escape_string($_POST['phone']);
-  $poc = $mysqli->real_escape_string($_POST['poc']);
-
-  $_SESSION['name'] = $name;
-
-  $sql = "INSERT INTO patients (name, dob, blood, address, phone, poc) "
-  . "VALUES ('$name', '$dob', '$blood', '$address', '$phone', '$poc')";
-  if ($mysqli->query($sql)=== true){
-    $_SESSION['message'] = 'Registration successful';
-    //header("location: welcome.php");
-  }
-  else {
-    $_SESSION['message'] = "User could not be added";
-  }
-}
+// Query appointments
+$sql = "SELECT * FROM appointments";
+$appointments = mysqli_query($db, $sql);
 ?>
 
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
 
   <meta charset="UTF-8">
 
@@ -86,20 +63,18 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
     <?php require_once('buttonbar.php'); ?>
 
     <div id="container">
-    <h2>Current Patients</h2>
-    <div id="patients">
+    <h2>Current Appointments</h2>
+    <div id="appointments">
         <ul>
-          <?php while($row = mysqli_fetch_assoc($patientID)) : ?>
-            <li class="patients">
+          <?php while($row = mysqli_fetch_assoc($appointments)) : ?>
+            <li class="appointments">
               <span><hr width="60%" NOSHADE align="left" style="height:3px"></span>
-              <span><b><?php echo $row['name'] ?><br></span></b>
+              <span><b><?php echo $row['patient_name'] ?><br></span></b>
               <span><hr width="60%" NOSHADE align="left" style="height:3px"></span>
-              <span>Date of Birth: <?php echo $row['DOB'] ?><br></span>
-              <span>Blood: <?php echo $row['Blood'] ?><br></span>
-              <span>Address: <?php echo $row['Address'] ?><br></span>
-              <span>Phone: <?php echo $row['phone'] ?><br></span>
-              <span>Emergency Contact: <?php echo $row['poc'] ?><br></span>
-              <span>Phone: <?php echo $row['poc_phone'] ?><br></span>
+              <span>Physician(s): <?php echo $row['physician_name'] ?><br></span>
+              <span>Start Time: <?php echo $row['start_datetime'] ?><br></span>
+              <span>End Time: <?php echo $row['end_datetime'] ?><br></span>
+              <span>Treatment Reason: Heart Attack<br></span>
               <br>
             </li>
           <?php endwhile; $db->close();?>
