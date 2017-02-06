@@ -65,9 +65,9 @@ $treatment = mysqli_query($db, $sql);
     <?php require_once('buttonbar.php'); ?>
 
     <div id="container">
-    <h2>Current Physicians</h2>
+  <h1 class="well">Current Physicians</h1>
     <div id="physicians">
-        <ul>
+        <ul style="padding-left:0px">
           <?php while($row = mysqli_fetch_assoc($treatment)) : ?>
             <li class="physicians">
               <span><hr width="60%" NOSHADE align="left" style="height:3px"></span>

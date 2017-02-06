@@ -63,9 +63,9 @@ $appointments = mysqli_query($db, $sql);
     <?php require_once('buttonbar.php'); ?>
 
     <div id="container">
-    <h2>Current Appointments</h2>
+    <h1 class="well">Current Appointments</h1>
     <div id="appointments">
-        <ul>
+      <ul style="padding-left:0px">
           <?php while($row = mysqli_fetch_assoc($appointments)) : ?>
             <li class="appointments">
               <span><hr width="60%" NOSHADE align="left" style="height:3px"></span>
@@ -74,7 +74,7 @@ $appointments = mysqli_query($db, $sql);
               <span>Physician(s): <?php echo $row['physician_name'] ?><br></span>
               <span>Start Time: <?php echo $row['start_datetime'] ?><br></span>
               <span>End Time: <?php echo $row['end_datetime'] ?><br></span>
-              <span>Treatment Reason: Heart Attack<br></span>
+              <span>Treatment Reason: Varicocele<br></span>
               <br>
             </li>
           <?php endwhile; $db->close();?>

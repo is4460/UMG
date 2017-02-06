@@ -45,29 +45,44 @@ $treatment = mysqli_query($db, $sql);
   <script src="https://use.fontawesome.com/7b7005c99f.js"></script>
 
   <!-- Google Fonts -->
-  <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
 
   <!-- Custom styles for this template -->
   <link href="css/sticky-footer-navbar.css" rel="stylesheet">
   <link href="css/fancy.css" rel="stylesheet">
 
+<style>
+div.page-header {
+  font-family: oxygen;
+  font-size: 48px;
+}
+
+p {
+  font-family: roboto;
+}
+
+</style>
+
 </head>
 <body>
   <?php require_once('navbar.php');?>
+    <div container>
+    <img class="object-fit_cover" style="width: 100%" src="images/banner.jpg" alt="Unita Medical Group"</img>
+  </div>
   <div class="container" style="padding:0px" style="margin-left:100px">
     <div class="page-header">
-      <h1>Uinta Medical Group</h1>
+      <b>Uinta Medical Group</b>
       <!-- Adds the button bar -->
     </div>
     <?php require_once('buttonbar.php'); ?>
     <br>
     <div class="panel panel-default">
-      <div class="panel-heading">
+      <div class="panel-heading" style="padding:5px; padding-left:10px">
         <h3 class="panel-title">Latest Tweets</h3>
       </div>
-      <div class="panel-body">
-        <i class="fa fa-twitter-square"></i><blockquote>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos! - <a href="twitter.com">@doakk</a></blockquote>
+      <div class="panel-body" style="padding:10px; font-size:22px">
+        <blockquote style="padding-left:5px; padding-top:0px; padding-bottom:0px; padding-right:0px; margin-bottom:0px; font-size: 14px"><span style="margin-right:5px; font-size:20px"><i class="fa fa-twitter-square"></i></span>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos! - <a href="twitter.com">@doakk</a></blockquote>
       </div>
     </div>
 
@@ -77,13 +92,14 @@ $treatment = mysqli_query($db, $sql);
         <h3 class="panel-title">Welcome</h3>
       </div>
       <div class="panel-body">
-        <img class="object-fit_cover" src="images/banner.jpg" alt="Unita Medical Group"</img>
         <div class="card">
-          <div class="card-block">
+          <div class="card-block" style="margin-top:20px" style="margin-bottom:20px">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc.
+            </p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc.
             </p>
             <p>
-              <blockquote class="blockquote">Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. -<cite>Dr. Majsds<cite></p></blockquote>
+              <blockquote class="blockquote" style="font-size:14px">Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. -<cite>Dr. Majsds<cite></p></blockquote>
               </div>
             </div>
           </div>

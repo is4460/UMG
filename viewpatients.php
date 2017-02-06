@@ -86,9 +86,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
     <?php require_once('buttonbar.php'); ?>
 
     <div id="container">
-    <h2>Current Patients</h2>
+      <h1 class="well">Current Patients</h1>
     <div id="patients">
-        <ul>
+        <ul style="padding-left:0px">
           <?php while($row = mysqli_fetch_assoc($patientID)) : ?>
             <li class="patients">
               <span><hr width="60%" NOSHADE align="left" style="height:3px"></span>

@@ -9,8 +9,14 @@
 <script src="https://use.fontawesome.com/7b7005c99f.js"></script>
 
 <!-- Google Fonts -->
-<link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+
+<style>
+navbar-default{
+  font-family:roboto;
+}
+</style>
 
 </head>
 
@@ -24,7 +30,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html"><i class="fa fa-stethoscope" aria-hidden="true"></i></a>
+      <a class="navbar-brand" href="index.php"><i class="fa fa-stethoscope" aria-hidden="true"></i></a>
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
@@ -36,20 +42,20 @@
         <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Signin <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="#">Patient</a></li>
-          <li><a href="#">Physician</a></li>
-          <li><a href="#">Admin</a></li>
+          <li><a href="signin.php">Patient</a></li>
+          <li><a href="signin.php">Physician</a></li>
+          <li><a href="signin.php">Admin</a></li>
           </ul>
       </li>
         <li><a href="#">Signout</a></li>
       </ul>
       <form class="navbar-form navbar-right">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
+          <input type="text" class="form-control input-sm" placeholder="Search">
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-sm btn-primary">Submit</button>
       </form>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+    </div>
+  </div>
 </nav>
 </html>
