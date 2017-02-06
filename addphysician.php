@@ -128,77 +128,79 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
   }
   </style>
 </head>
-  <body>
-    <?php require_once('navbar.php');?>
+<body>
+  <?php require_once('navbar.php');?>
 
-    <div class="container" style="padding: 0px">
-      <div class="page-header">
-        <h1>Uinta Medical Group</h1>
-      </div>
-      <?php require_once('buttonbar.php'); ?>
+  <div class="container" style="padding: 0px">
+    <div class="page-header">
+      <h1>Uinta Medical Group</h1>
     </div>
-    <div class="container" style="padding: 0px">
-      <h1 class="well">Add Patient</h1>
-      <div class="col-lg-12 well" style="margin-bottom: 50px">
-        <div class="row">
-
-
-          <form>
-            <div class="col-sm-12">
-              <div class="row">
-                <div class="col-sm-6 form-group">
-                  <label>Patient Name</label>
-                  <input type="text" placeholder="Enter Name Here.." class="form-control">
-                </div>
-                <div class="col-sm-6 form-group">
-                  <label>Date of Birth</label>
-                  <input type="text" placeholder="Enter DOB Here.." class="form-control">
-                </div>
+    <?php require_once('buttonbar.php'); ?>
+  </div>
+  <div class="container" style="padding: 0px">
+    <h1 class="well">Add Physician</h1>
+    <div class="col-lg-12 well" style="margin-bottom: 50px">
+      <div class="row">
+        <form>
+          <div class="col-sm-12">
+            <div class="row">
+              <div class="col-sm-6 form-group">
+                <label>Patient Name</label>
+                <input type="text" placeholder="Enter Name Here.." class="form-control">
               </div>
-              <div class="form-group">
-                <label>Address</label>
-                <textarea placeholder="Enter Address Here.." rows="3" class="form-control"></textarea>
+              <div class="col-sm-6 form-group">
+                <label>Date of Birth</label>
+                <input type="text" placeholder="Enter DOB Here.." class="form-control">
               </div>
-              <div class="row">
-                <div class="col-sm-4 form-group">
-                  <label>City</label>
-                  <input type="text" placeholder="Enter City Name Here.." class="form-control">
-                </div>
-                <div class="col-sm-4 form-group">
-                  <label>State</label>
-                  <input type="text" placeholder="Enter State Name Here.." class="form-control">
-                </div>
-                <div class="col-sm-4 form-group">
-                  <label>Zip</label>
-                  <input type="text" placeholder="Enter Zip Code Here.." class="form-control">
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-sm-6 form-group">
-                  <label>Blood Type</label>
-                  <input type="text" placeholder="Enter Designation Here.." class="form-control">
-                </div>
-                <div class="col-sm-6 form-group">
-                  <label>Phone Number</label>
-                  <input type="text" placeholder="Enter Phone Number Here.." class="form-control">
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-sm-6 form-group">
-                  <label>Emergency Contact</label>
-                  <input type="text" placeholder="Enter Emergency Contact Here.." class="form-control">
-                </div>
-                <div class="col-sm-6 form-group">
-                  <label>Contact Phone</label>
-                  <input type="text" placeholder="Enter Contact Phone Here.." class="form-control">
-                </div>
-              </div>
-              <button type="button" class="btn btn-primary">Submit</button>
             </div>
-          </form>
-        </div>
+            <div class="form-group">
+              <label>Address</label>
+              <textarea placeholder="Enter Address Here.." rows="3" class="form-control"></textarea>
+            </div>
+            <div class="row">
+              <div class="col-sm-4 form-group">
+                <label>City</label>
+                <input type="text" placeholder="Enter City Name Here.." class="form-control">
+              </div>
+              <div class="col-sm-4 form-group">
+                <label>State</label>
+                <input type="text" placeholder="Enter State Name Here.." class="form-control">
+              </div>
+              <div class="col-sm-4 form-group">
+                <label>Zip</label>
+                <input type="text" placeholder="Enter Zip Code Here.." class="form-control">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6 form-group">
+                <label>Blood Type</label>
+                <input type="text" placeholder="Enter Blood Type Here.." class="form-control">
+              </div>
+              <div class="col-sm-6 form-group">
+                <label>Phone Number</label>
+                <input type="text" placeholder="Enter Phone Number Here.." class="form-control">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-4 form-group">
+                <label>Emergency Contact</label>
+                <input type="text" placeholder="Enter Emergency Contact Here.." class="form-control">
+              </div>
+              <div class="col-sm-4 form-group">
+                <label>Contact Phone</label>
+                <input type="text" placeholder="Enter Contact Phone Here.." class="form-control">
+              </div>
+              <div class="col-sm-4 form-group">
+                <label>Position</label>
+                <input type="text" placeholder="Enter Position Here.." class="form-control">
+              </div>
+            </div>
+            <button type="button" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
       </div>
     </div>
-  </body>
-  <?php require_once('footer.php');?>
+  </div>
+</body>
+<?php require_once('footer.php');?>
 </html>
