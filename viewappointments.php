@@ -1,6 +1,7 @@
 <?php
+
+// Creds for MySQL connection
 require_once('creds.php');
-require_once('navbar.php');
 
 // Session management
 session_start();
@@ -23,7 +24,9 @@ $appointments = mysqli_query($db, $sql);
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 
   <meta charset="UTF-8">
 
@@ -53,6 +56,9 @@ $appointments = mysqli_query($db, $sql);
 </head>
 <body>
 
+  <!-- Top navbar -->
+  <?php require_once('navbar.php');?>
+  
     <div class="container" style="padding:0px">
     <!-- page-header adds space around text and enlarges it. It also adds an underline at the end -->
     <div class="page-header">

@@ -2,7 +2,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 
   <meta charset="UTF-8">
 
@@ -89,7 +90,7 @@
   </div>
 </div>
 </div>
-  
+
 </body>
 <?php require_once('footer.php');?>
 </html>

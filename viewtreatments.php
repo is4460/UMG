@@ -1,6 +1,5 @@
 <?php
 require_once('creds.php');
-require_once('navbar.php');
 
 // Session management
 session_start();
@@ -23,6 +22,7 @@ $treatment = mysqli_query($db, $sql);
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Favicon -->
   <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 
   <meta charset="UTF-8">
@@ -53,6 +53,9 @@ $treatment = mysqli_query($db, $sql);
 </head>
 <body>
 
+  <!-- Top navbar -->
+  <?php require_once('navbar.php');?>
+  
   <div class="container" style="padding:0px">
     <div class="page-header">
       <h1>Uinta Medical Group</h1>

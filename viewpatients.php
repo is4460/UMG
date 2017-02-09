@@ -1,6 +1,7 @@
 <?php
+
+// Creds for MySQL connection
 require_once('creds.php');
-require_once('navbar.php');
 
 // Session management
 session_start();
@@ -46,6 +47,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+  <!-- Favicon -->
   <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 
   <meta charset="UTF-8">
@@ -76,6 +79,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 </head>
 <body>
 
+  <!-- Top navbar -->
+  <?php require_once('navbar.php');?>
+  
     <div class="container" style="padding:0px">
     <!-- page-header adds space around text and enlarges it. It also adds an underline at the end -->
     <div class="page-header">

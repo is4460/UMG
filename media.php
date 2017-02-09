@@ -52,33 +52,26 @@
 <body>
   <?php require_once('navbar.php');?>
   <img class="object-fit_cover" style="width: 100%" src="images/banner.jpg" alt="Unita Medical Group">
-  <div class="container"><!--style="padding:0px; margin-left:100px"-->
+  <div class="container">
     <div class="page-header">
-      <b><i class="fa fa-stethoscope" aria-hidden="true">&nbsp;</i>Uinta Medical Group</b>
       <!-- Adds the button bar -->
     </div>
     <?php require_once('buttonbar.php'); ?>
     <br>
     <div class="panel panel-default">
       <div class="panel-heading"> <!-- style="padding:5px; padding-left:10px"-->
-        <h3 class="panel-title">Latest Tweets</h3>
-      </div>
-      <div class="panel-body" style="padding:10px; font-size:22px">
-        <blockquote style="padding-left:5px; padding-top:0px; padding-bottom:0px; padding-right:0px; margin-bottom:0px; font-size: 14px"><span style="margin-right:5px; font-size:20px"><i class="fa fa-twitter-square"></i></span>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos! - <a href="twitter.com">@doakk</a></blockquote>
+
+        <h3 class="panel-title"><b>Media</b></h3>
       </div>
     </div>
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h3 class="panel-title">Welcome</h3>
+        <h3 class="panel-title"></h3>
       </div>
       <div class="panel-body">
         <div class="card">
           <div class="card-block"> <!--style="margin-top:20px; margin-bottom:20px"-->
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc.
-            </p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc.
-            </p>
-            <blockquote class="blockquote" style="font-size:14px">Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. -<cite>Dr. Majsds</cite></blockquote>
+              <img src="https://media.giphy.com/media/y3Kd9Sx38HDXi/giphy.gif">
             </div>
           </div>
         </div>

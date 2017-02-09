@@ -1,27 +1,5 @@
-<html>
-<head>
-<!-- Bootstrap styling -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
-<!-- Fontawesome awesomeness -->
-<script src="https://use.fontawesome.com/7b7005c99f.js"></script>
-
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
-
-<style>
-navbar-default{
-  font-family:roboto;
-}
-</style>
-
-</head>
-
 <!-- Fancy Nav Bar -->
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default" style="margin-bottom:0px">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -35,7 +13,7 @@ navbar-default{
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="index.php">Home</a></li>
-        <li><a href="#">Media</a></li>
+        <li><a href="media.php">Media</a></li>
         <li><a href="#">Feedback</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -58,4 +36,3 @@ navbar-default{
     </div>
   </div>
 </nav>
-</html>

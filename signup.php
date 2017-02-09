@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
   <meta charset="UTF-8">
 
   <!-- If IE use the latest rendering engine -->

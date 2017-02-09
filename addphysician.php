@@ -1,6 +1,6 @@
 <?php
+// Creds for MySQL connection
 require_once 'creds.php';
-require_once 'navbar.php';
 
 // Session management
 session_start();
@@ -45,6 +45,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
   <meta charset="UTF-8">
 
   <!-- If IE use the latest rendering engine -->
@@ -202,5 +206,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
     </div>
   </div>
 </body>
+<!-- Footer -->
 <?php require_once('footer.php');?>
 </html>
