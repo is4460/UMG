@@ -1,6 +1,6 @@
 <?php
+
 require_once('creds.php');
-require_once('navbar.php');
 
 // Session management
 session_start();
@@ -25,6 +25,7 @@ $treatment = mysqli_query($db, $sql);
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Favicon -->
   <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 
   <meta charset="UTF-8">
@@ -55,19 +56,18 @@ $treatment = mysqli_query($db, $sql);
 </head>
 <body>
 
+  <!-- Top navbar -->
+  <?php require_once('navbar.php');?>
+
     <div class="container" style="padding:0px">
-    <!-- page-header adds space around text and enlarges it. It also adds an underline at the end -->
-    <div class="page-header">
-      <h1>Uinta Medical Group</h1>
-    </div>
 
      <!-- Adds the button bar -->
     <?php require_once('buttonbar.php'); ?>
 
     <div id="container">
-    <h2>Current Physicians</h2>
+  <h1 class="well">Current Physicians</h1>
     <div id="physicians">
-        <ul>
+        <ul style="padding-left:0px">
           <?php while($row = mysqli_fetch_assoc($treatment)) : ?>
             <li class="physicians">
               <span><hr width="60%" NOSHADE align="left" style="height:3px"></span>

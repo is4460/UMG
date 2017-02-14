@@ -1,6 +1,5 @@
 <?php
 require_once('creds.php');
-require_once('navbar.php');
 
 // Session management
 session_start();
@@ -17,14 +16,13 @@ if ($db->connect_error){
 // Query patients
 $sql = "SELECT * FROM treatments";
 $treatment = mysqli_query($db, $sql);
-
-
 ?>
 
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Favicon -->
   <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 
   <meta charset="UTF-8">
@@ -55,18 +53,18 @@ $treatment = mysqli_query($db, $sql);
 </head>
 <body>
 
-    <div class="container" style="padding:0px">
-    <div class="page-header">
-      <h1>Uinta Medical Group</h1>
-    </div>
+  <!-- Top navbar -->
+  <?php require_once('navbar.php');?>
 
-     <!-- Adds the button bar -->
+  <div class="container" style="padding:0px">
+
+    <!-- Adds the button bar -->
     <?php require_once('buttonbar.php'); ?>
 
     <div id="container">
-    <h2>Current Treatments</h2>
-    <div id="treatments">
-        <ul>
+      <h1 class="well">Current Treatments</h1>
+      <div id="treatments">
+        <ul style="padding-left:0px">
           <?php while($row = mysqli_fetch_assoc($treatment)) : ?>
             <li class="treatments">
               <span><hr width="60%" NOSHADE align="left" style="height:3px"></span>
@@ -83,6 +81,6 @@ $treatment = mysqli_query($db, $sql);
       </div>
     </div>
   </div>
-  </body>
-  <?php require_once('footer.php');?>
-  </html>
+</body>
+<?php require_once('footer.php');?>
+</html>

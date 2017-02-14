@@ -1,5 +1,4 @@
 <?php
-
 // Creds for MySQL connection
 require_once 'creds.php';
 
@@ -8,7 +7,7 @@ session_start();
 $_SESSION['message'] = '';
 
 // Establish mysql connection
-$db = new mysqli($host, $user, $pass, $database);
+$db = new mysqli($host, $user, $pass, $db);
 
 // Connection error handling
 if ($db->connect_error){
@@ -22,27 +21,23 @@ $patientID = mysqli_query($db, $sql);
 // Make sure the form is being posted
 if($_SERVER['REQUEST_METHOD'] == 'POST')
 {
-  // $mysqli->real_escape_string escapes special characters so they can be used in SQL statements
-  // INSERT INTO `patients` (`patientID`, `name`, `DOB`, `Blood`, `Address`, `phone`, `poc`, `poc_phone`) VALUES ('3', 'bob', '2017-02-09', 'b-', 'a293u2 ', '1231231234', 'aaojd', '1231231234');
-  $id = $mysqli->real_escape_string($_POST['id']);
   $name = $mysqli->real_escape_string($_POST['name']);
   $dob = $mysqli->real_escape_string($_POST['dob']);
   $blood = $mysqli->real_escape_string($_POST['blood']);
   $address = $mysqli->real_escape_string($_POST['address']);
   $phone = $mysqli->real_escape_string($_POST['phone']);
   $poc = $mysqli->real_escape_string($_POST['poc']);
-  $poc_phone = $mysqli->real_escape_string($_POST['poc_phone']);
 
   $_SESSION['name'] = $name;
-  $sql = "INSERT INTO patients (`patientID`, `name`, `DOB`, `Blood`, `Address`, `phone`, `poc`, `poc_phone`) "
-  . "VALUES ('$id', $name', '$dob','$blood','$address','$phone','$poc','$poc_phone')";
-  if ($db->query($sql)=== true){
+
+  $sql = "INSERT INTO patients (name, dob, blood, address, phone, poc) "
+  . "VALUES ('$name', '$dob', '$blood', '$address', '$phone', '$poc')";
+  if ($mysqli->query($sql)=== true){
     $_SESSION['message'] = 'Registration successful';
+    //header("location: welcome.php");
   }
   else {
     $_SESSION['message'] = "User could not be added";
-    echo Fail;
-
   }
 }
 ?>
@@ -138,46 +133,36 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
   </style>
 </head>
 <body>
-
-  <!-- Top navbar -->
   <?php require_once('navbar.php');?>
 
-  <!-- Title bar -->
   <div class="container" style="padding: 0px">
 
-    <!-- Button bar -->
     <?php require_once('buttonbar.php'); ?>
   </div>
   <div class="container" style="padding: 0px">
-    <h1 class="well">Add Patient</h1>
+    <h1 class="well">Add Physician</h1>
     <div class="col-lg-12 well" style="margin-bottom: 50px">
       <div class="row">
-
-        <!-- Form -->
         <form>
           <div class="col-sm-12">
             <div class="row">
-
-                <div class="col-sm-6 form-group">
-                  <label>ID</label>
-                  <input type="text" placeholder="Enter ID.." class="form-control" name="id">
-                </div><div class="col-sm-6 form-group">
+              <div class="col-sm-6 form-group">
                 <label>Patient Name</label>
-                <input type="text" placeholder="Enter Name Here.." class="form-control" name="name">
+                <input type="text" placeholder="Enter Name Here.." class="form-control">
               </div>
               <div class="col-sm-6 form-group">
                 <label>Date of Birth</label>
-                <input type="text" placeholder="Enter DOB Here.." class="form-control" name="dob">
+                <input type="text" placeholder="Enter DOB Here.." class="form-control">
               </div>
             </div>
-            <div class="f0orm-group">
+            <div class="form-group">
               <label>Address</label>
-              <textarea placeholder="Enter Address Here.." rows="3" class="form-control" name="address"></textarea>
+              <textarea placeholder="Enter Address Here.." rows="3" class="form-control"></textarea>
             </div>
             <div class="row">
-              <!-- <div class="col-sm-4 form-group">
+              <div class="col-sm-4 form-group">
                 <label>City</label>
-                <input type="text" placeholder="Enter City Name Here.." class="form-control"  name="city">
+                <input type="text" placeholder="Enter City Name Here.." class="form-control">
               </div>
               <div class="col-sm-4 form-group">
                 <label>State</label>
@@ -187,28 +172,32 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
                 <label>Zip</label>
                 <input type="text" placeholder="Enter Zip Code Here.." class="form-control">
               </div>
-            </div> -->
-            <!-- <div class="row"> -->
-              <div class="col-sm-6 form-group">
-                <label>Blood Type</label>
-                <input type="text" placeholder="Enter Designation Here.." class="form-control" name="blood">
-              </div>
-              <div class="col-sm-6 form-group">
-                <label>Phone Number</label>
-                <input type="text" placeholder="Enter Phone Number Here.." class="form-control"  name="phone">
-              </div>
             </div>
             <div class="row">
               <div class="col-sm-6 form-group">
-                <label>Emergency Contact</label>
-                <input type="text" placeholder="Enter Emergency Contact Here.." class="form-control" name="poc">
+                <label>Blood Type</label>
+                <input type="text" placeholder="Enter Blood Type Here.." class="form-control">
               </div>
               <div class="col-sm-6 form-group">
-                <label>Contact Phone</label>
-                <input type="text" placeholder="Enter Contact Phone Here.." class="form-control"  name="poc_phone">
+                <label>Phone Number</label>
+                <input type="text" placeholder="Enter Phone Number Here.." class="form-control">
               </div>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <div class="row">
+              <div class="col-sm-4 form-group">
+                <label>Emergency Contact</label>
+                <input type="text" placeholder="Enter Emergency Contact Here.." class="form-control">
+              </div>
+              <div class="col-sm-4 form-group">
+                <label>Contact Phone</label>
+                <input type="text" placeholder="Enter Contact Phone Here.." class="form-control">
+              </div>
+              <div class="col-sm-4 form-group">
+                <label>Position</label>
+                <input type="text" placeholder="Enter Position Here.." class="form-control">
+              </div>
+            </div>
+            <button type="button" class="btn btn-primary">Submit</button>
           </div>
         </form>
       </div>

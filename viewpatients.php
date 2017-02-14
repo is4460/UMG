@@ -1,6 +1,7 @@
 <?php
+
+// Creds for MySQL connection
 require_once('creds.php');
-require_once('navbar.php');
 
 // Session management
 session_start();
@@ -46,6 +47,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+  <!-- Favicon -->
   <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 
   <meta charset="UTF-8">
@@ -76,19 +79,19 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 </head>
 <body>
 
+  <!-- Top navbar -->
+  <?php require_once('navbar.php');?>
+
     <div class="container" style="padding:0px">
-    <!-- page-header adds space around text and enlarges it. It also adds an underline at the end -->
-    <div class="page-header">
-      <h1>Uinta Medical Group</h1>
-    </div>
+    
 
      <!-- Adds the button bar -->
     <?php require_once('buttonbar.php'); ?>
 
     <div id="container">
-    <h2>Current Patients</h2>
+      <h1 class="well">Current Patients</h1>
     <div id="patients">
-        <ul>
+        <ul style="padding-left:0px">
           <?php while($row = mysqli_fetch_assoc($patientID)) : ?>
             <li class="patients">
               <span><hr width="60%" NOSHADE align="left" style="height:3px"></span>

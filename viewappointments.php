@@ -1,6 +1,7 @@
 <?php
+
+// Creds for MySQL connection
 require_once('creds.php');
-require_once('navbar.php');
 
 // Session management
 session_start();
@@ -23,7 +24,9 @@ $appointments = mysqli_query($db, $sql);
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 
   <meta charset="UTF-8">
 
@@ -53,19 +56,18 @@ $appointments = mysqli_query($db, $sql);
 </head>
 <body>
 
+  <!-- Top navbar -->
+  <?php require_once('navbar.php');?>
+
     <div class="container" style="padding:0px">
-    <!-- page-header adds space around text and enlarges it. It also adds an underline at the end -->
-    <div class="page-header">
-      <h1>Uinta Medical Group</h1>
-    </div>
 
      <!-- Adds the button bar -->
     <?php require_once('buttonbar.php'); ?>
 
     <div id="container">
-    <h2>Current Appointments</h2>
+    <h1 class="well">Current Appointments</h1>
     <div id="appointments">
-        <ul>
+      <ul style="padding-left:0px">
           <?php while($row = mysqli_fetch_assoc($appointments)) : ?>
             <li class="appointments">
               <span><hr width="60%" NOSHADE align="left" style="height:3px"></span>
@@ -74,7 +76,7 @@ $appointments = mysqli_query($db, $sql);
               <span>Physician(s): <?php echo $row['physician_name'] ?><br></span>
               <span>Start Time: <?php echo $row['start_datetime'] ?><br></span>
               <span>End Time: <?php echo $row['end_datetime'] ?><br></span>
-              <span>Treatment Reason: Heart Attack<br></span>
+              <span>Treatment Reason: Varicocele<br></span>
               <br>
             </li>
           <?php endwhile; $db->close();?>
