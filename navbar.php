@@ -1,5 +1,9 @@
 <!-- Fancy Nav Bar -->
+<<<<<<< HEAD
 <nav class="navbar navbar-inverse navbar-default navbar-statc-top" style="margin-bottom:0px; border-radius:0px">
+=======
+<nav class="navbar navbar-default" style="margin-bottom:0px">
+>>>>>>> 7ebf82d7d137a2373edddc78c4979acf204ffea3
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">

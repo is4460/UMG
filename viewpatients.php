@@ -81,7 +81,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 
   <!-- Top navbar -->
   <?php require_once('navbar.php');?>
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 7ebf82d7d137a2373edddc78c4979acf204ffea3
     <div class="container" style="padding:0px">
     
 

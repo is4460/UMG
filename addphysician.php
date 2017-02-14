@@ -136,7 +136,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
   <?php require_once('navbar.php');?>
 
   <div class="container" style="padding: 0px">
+<<<<<<< HEAD
 
+=======
+    <div class="page-header">
+      <h1>Uinta Medical Group</h1>
+    </div>
+>>>>>>> 7ebf82d7d137a2373edddc78c4979acf204ffea3
     <?php require_once('buttonbar.php'); ?>
   </div>
   <div class="container" style="padding: 0px">

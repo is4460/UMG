@@ -55,8 +55,16 @@ $treatment = mysqli_query($db, $sql);
 
   <!-- Top navbar -->
   <?php require_once('navbar.php');?>
+<<<<<<< HEAD
 
   <div class="container" style="padding:0px">
+=======
+  
+  <div class="container" style="padding:0px">
+    <div class="page-header">
+      <h1>Uinta Medical Group</h1>
+    </div>
+>>>>>>> 7ebf82d7d137a2373edddc78c4979acf204ffea3
 
     <!-- Adds the button bar -->
     <?php require_once('buttonbar.php'); ?>

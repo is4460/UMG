@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 require "twitteroauth/autoload.php";
 
@@ -6,6 +7,8 @@ use Abraham\TwitterOAuth\TwitterOAuth;
 $connection = new TwitterOAuth(d56ljLTS29JSbYw8F7k5aWYxH, GPr1r77T45HogVJiuymPtI3HM6V7xu2zqLpYNAiJCjkSsOV0D0, 828476136128589825-A54msJ3fTakWrMBCFWoGFZdbhGY7mia, xYkMIsMW9WBnUKuP87VK1REw3RiN0hVk2hDdxgiyjPQNg);
 
 ?>
+=======
+>>>>>>> 7ebf82d7d137a2373edddc78c4979acf204ffea3
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,7 +46,10 @@ $connection = new TwitterOAuth(d56ljLTS29JSbYw8F7k5aWYxH, GPr1r77T45HogVJiuymPtI
   div.page-header {
     font-family: oxygen;
     font-size: 48px;
+<<<<<<< HEAD
     margin-top: 50px;
+=======
+>>>>>>> 7ebf82d7d137a2373edddc78c4979acf204ffea3
   }
 
   p {
@@ -58,8 +64,11 @@ $connection = new TwitterOAuth(d56ljLTS29JSbYw8F7k5aWYxH, GPr1r77T45HogVJiuymPtI
   }
 
   </style>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 7ebf82d7d137a2373edddc78c4979acf204ffea3
 </head>
 <body>
   <?php require_once('navbar.php');?>
@@ -86,10 +95,17 @@ $connection = new TwitterOAuth(d56ljLTS29JSbYw8F7k5aWYxH, GPr1r77T45HogVJiuymPtI
       <div class="panel-body">
         <div class="card">
           <div class="card-block"> <!--style="margin-top:20px; margin-bottom:20px"-->
+<<<<<<< HEAD
              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc.
             </p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc.
             </p>
+=======
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc.
+            </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc.
+            </p>
+>>>>>>> 7ebf82d7d137a2373edddc78c4979acf204ffea3
             <blockquote class="blockquote" style="font-size:14px">Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. -<cite>Dr. Majsds</cite></blockquote>
             </div>
           </div>

@@ -144,6 +144,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 
   <!-- Title bar -->
   <div class="container" style="padding: 0px">
+<<<<<<< HEAD
+=======
+    <div class="page-header">
+      <h1>Uinta Medical Group</h1>
+    </div>
+>>>>>>> 7ebf82d7d137a2373edddc78c4979acf204ffea3
 
     <!-- Button bar -->
     <?php require_once('buttonbar.php'); ?>
@@ -157,6 +163,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
         <form>
           <div class="col-sm-12">
             <div class="row">
+<<<<<<< HEAD
 
                 <div class="col-sm-6 form-group">
                   <label>ID</label>
@@ -178,6 +185,25 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
               <!-- <div class="col-sm-4 form-group">
                 <label>City</label>
                 <input type="text" placeholder="Enter City Name Here.." class="form-control"  name="city">
+=======
+              <div class="col-sm-6 form-group">
+                <label>Patient Name</label>
+                <input type="text" placeholder="Enter Name Here.." class="form-control">
+              </div>
+              <div class="col-sm-6 form-group">
+                <label>Date of Birth</label>
+                <input type="text" placeholder="Enter DOB Here.." class="form-control">
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Address</label>
+              <textarea placeholder="Enter Address Here.." rows="3" class="form-control"></textarea>
+            </div>
+            <div class="row">
+              <div class="col-sm-4 form-group">
+                <label>City</label>
+                <input type="text" placeholder="Enter City Name Here.." class="form-control">
+>>>>>>> 7ebf82d7d137a2373edddc78c4979acf204ffea3
               </div>
               <div class="col-sm-4 form-group">
                 <label>State</label>
@@ -187,6 +213,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
                 <label>Zip</label>
                 <input type="text" placeholder="Enter Zip Code Here.." class="form-control">
               </div>
+<<<<<<< HEAD
             </div> -->
             <!-- <div class="row"> -->
               <div class="col-sm-6 form-group">
@@ -196,11 +223,23 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
               <div class="col-sm-6 form-group">
                 <label>Phone Number</label>
                 <input type="text" placeholder="Enter Phone Number Here.." class="form-control"  name="phone">
+=======
+            </div>
+            <div class="row">
+              <div class="col-sm-6 form-group">
+                <label>Blood Type</label>
+                <input type="text" placeholder="Enter Designation Here.." class="form-control">
+              </div>
+              <div class="col-sm-6 form-group">
+                <label>Phone Number</label>
+                <input type="text" placeholder="Enter Phone Number Here.." class="form-control">
+>>>>>>> 7ebf82d7d137a2373edddc78c4979acf204ffea3
               </div>
             </div>
             <div class="row">
               <div class="col-sm-6 form-group">
                 <label>Emergency Contact</label>
+<<<<<<< HEAD
                 <input type="text" placeholder="Enter Emergency Contact Here.." class="form-control" name="poc">
               </div>
               <div class="col-sm-6 form-group">
@@ -209,12 +248,26 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
               </div>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
+=======
+                <input type="text" placeholder="Enter Emergency Contact Here.." class="form-control">
+              </div>
+              <div class="col-sm-6 form-group">
+                <label>Contact Phone</label>
+                <input type="text" placeholder="Enter Contact Phone Here.." class="form-control">
+              </div>
+            </div>
+            <button type="button" class="btn btn-primary">Submit</button>
+>>>>>>> 7ebf82d7d137a2373edddc78c4979acf204ffea3
           </div>
         </form>
       </div>
     </div>
   </div>
 </body>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7ebf82d7d137a2373edddc78c4979acf204ffea3
 <!-- Footer -->
 <?php require_once('footer.php');?>
 </html>
